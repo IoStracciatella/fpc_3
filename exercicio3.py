@@ -6,7 +6,7 @@ import matplotlib.pyplot as plt
 # Valores iniciais que serão inseridos na função
 x0, y0 = 0, 0
 x0 = float(input('Escolha um valor inicial de x para iniciar a aproximação. n: '))
-y0 = float(input('Escolha um valor inicial de x para iniciar a aproximação. n: '))
+y0 = float(input('Escolha um valor inicial de y para iniciar a aproximação. n: '))
 
 def metodoDeJacobi(x0, y0, tol):
     x, y = 0, 0 # Essas variáveis são os valores que serão calculados, e recalculados, e recalculados... até a aproximar o bastante da solução
