@@ -8,10 +8,12 @@ def f(x):
 def df(x):
     return np.exp(-x**2) * (1 - 2 * x**2)
 
-# Implementa o método de Newton
-def newton_method(x0, tol=1e-5, max_iter=100):
+limiteDeIteracoes = int(input('Defina um limite de iterações para evitar um loop infinito: '))
+
+# Função que realiza o método de Newton
+def metodoDeNewton(x0, tol=1e-5, limiteDeIteracoes=100):
     x = x0
-    for i in range(max_iter):
+    for i in range(limiteDeIteracoes):
         fx = f(x)
         dfx = df(x)
         if abs(fx) < tol:
@@ -21,7 +23,7 @@ def newton_method(x0, tol=1e-5, max_iter=100):
             return None, i
         x = x - fx / dfx
     print("Número máximo de iterações atingido.")
-    return x, max_iter
+    return x, limiteDeIteracoes
 
 # Plot da função para ver onde estão as raízes
 x_vals = np.linspace(-1, 2, 400)
@@ -34,8 +36,8 @@ plt.legend()
 plt.grid(True)
 plt.show()
 
-# Testa o método de Newton com valores iniciais próximos das raízes
+# Testa o método de Newton com os valores iniciais escolhidos
 x0_values = [float(input('Escolha um ponto inicial x0: ')), float(input('Agora escolhe outro ponto inicial x0: '))]
 for x0 in x0_values:
-    root, iterations = newton_method(x0)
-    print(f"Raiz encontrada: {root} com {iterations} iterações para x0 = {x0}")
+    raiz, iteracoes = metodoDeNewton(x0)
+    print(f"Raiz encontrada: {raiz} com {iteracoes} iterações para x0 = {x0}")
