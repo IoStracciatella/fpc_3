@@ -8,7 +8,7 @@ def f(x):
 def df(x):
     return np.exp(-x**2) * (1 - 2 * x**2)
 
-escolhaTol = float(input('Defina um valor de tolerância (float): '))
+escolhaTol = float(input('Defina um valor de tolerância ([float] recomendado: 10e-5): '))
 limiteDeIteracoes = int(input('Defina um limite de iterações para evitar um loop infinito (RECOMENDADO VALORES ENTRE ]0, 10^5]) '))
 
 # Função que realiza o método de Newton
