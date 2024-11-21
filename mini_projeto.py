@@ -177,7 +177,7 @@ def interface():
     while True:
         print("\nEscolha o que deseja visualizar:")
         print("1. Análise de densidades")
-        print("2. Gráfico de deslocamento y indice 39)
+        print("2. Gráfico de deslocamento y indice 39")
         print("3. Gráficos para diferentes pares de forças")
         print("0. Sair")
         escolha = input("Digite sua escolha: ")
