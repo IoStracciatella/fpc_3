@@ -196,6 +196,5 @@ def interface():
         else:
             print("Opção inválida.")
 
-
 # Executa o programa
 interface()
